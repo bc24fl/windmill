@@ -4,3 +4,7 @@ services:
     ports:
       - "${HTTP_PORT-80}:80"
       #- "${HTTPS_PORT-80}:443"  #Uncomment to enable HTTPS handling by Caddy
+    environment:
+      - BASE_URL=":80"
+      # - BASE_URL=":443" # uncomment and comment line above to enable HTTPS via custom certificate and key files
+      # - BASE_URL=mydomain.com # Uncomment and comment line above to enable HTTPS handling by Caddy
